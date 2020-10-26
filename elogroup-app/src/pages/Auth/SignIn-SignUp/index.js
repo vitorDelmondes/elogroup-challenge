@@ -6,7 +6,7 @@ import {
   InputRadius,
   ButtomFilled,
 } from "./styles";
-import { Card, Row, Col, Form, Button, Input, Spin, Modal, message } from "antd";
+import {Form, Button, Input, Spin, Modal, message } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 
 import Logo from "../../../assets/logo-white.png";
@@ -37,7 +37,7 @@ const SignIn = ({ history }) => {
   return (
     <Container>
       <div>
-        <img src={Logo}></img>
+        <img src={Logo} alt="logo-white"></img>
       </div>
       <ContainerCenter>
         <Form
@@ -124,7 +124,7 @@ const SignIn = ({ history }) => {
               marginBottom: "30px",
             }}
           >
-            <img src={Logo}></img>
+            <img src={Logo} alt="logo-white"></img>
           </div>
           <p>Usuário</p>
 

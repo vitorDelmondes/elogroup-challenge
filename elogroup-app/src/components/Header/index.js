@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Layout, Menu, Breadcrumb, Button, Dropdown } from "antd";
+import React, { useEffect } from "react";
+import { Layout, Button } from "antd";
 
 import {
-  HomeOutlined,
-  BarsOutlined,
-  ToolOutlined,
-  CloseCircleOutlined,
-  UserOutlined,
+  CloseCircleOutlined
 } from "@ant-design/icons";
 
 import Logo from "../../assets/logo-white.png";

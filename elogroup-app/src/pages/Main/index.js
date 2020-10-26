@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import produce from "immer";
 
-import { Container, Card, ButtomFilled, InputRadius } from "./styles";
+import { Container, Card, ButtomFilled, InputRadius, Row } from "./styles";
 import { Button, Modal, message, Spin, Checkbox } from "antd";
 
 import Header from "../../components/Header";
@@ -15,7 +15,7 @@ import Logo from "../../assets/logo-white.png";
 
 const data = loadLists();
 
-function Main() {
+function Main({ history }) {
   const [lists, setLists] = useState(data);
   const [visible, setVisible] = useState(false);
   const [loadingRefresh, setLoadingRefresh] = useState(false);
@@ -43,11 +43,14 @@ function Main() {
 
   return (
     <BoardContext.Provider value={{ lists, move }}>
-      <Header />
+      <Header history={history}/>
       <Container>
-        <Button type="text" onClick={() => { setVisible(true)}}>
+        <Row>
+
+        <Button type="primary" onClick={() => { setVisible(true)}}>
           Criar
         </Button>
+        </Row>
         <Card>
           {lists.map((item, index) => (
             <List key={item.title} data={item} index={index} />
@@ -70,8 +73,7 @@ function Main() {
               color: "#fff",
             }}
           >
-            {loadingRefresh ? <Spin indicator={antIcon} /> : "Confirmar"}
-              Salvar
+            {loadingRefresh ? <Spin indicator={antIcon} /> : "Salvar"}
             </ButtomFilled>,
         ]}
       >
@@ -86,7 +88,7 @@ function Main() {
             marginBottom: "30px",
           }}
         >
-          <img src={Logo}></img>
+          <img src={Logo} alt="logo-white"></img>
         </div>
         <p>Nome</p>
 
@@ -106,6 +108,13 @@ function Main() {
         // value={email}
         // onChange={(e) => setEmail(e.target.value)}
         />
+
+        <p>Oportunidades</p>
+        <Checkbox value="RPA">RPA</Checkbox>
+        <Checkbox value="Produto Digital">Produto Digital</Checkbox>
+        <Checkbox value="Analytcs">Analytcs</Checkbox>
+        <Checkbox value="BPM">BPM</Checkbox>
+
       </Modal>
     </BoardContext.Provider>
   );

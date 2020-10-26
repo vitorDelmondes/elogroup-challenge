@@ -23,7 +23,7 @@ export const Card = styled.div`
   /* padding: 30px 0;
   height: calc(100% - 80px); */
   flex-direction: row;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   background-color: #fff;
   width: 60%;
   height: 65%;
@@ -38,3 +38,8 @@ export const ButtomFilled = styled(Button)`
   border-radius: 5px;
   border: none;
 `;
+
+export const Row = styled.div`
+    width: 60%;
+`;
+
