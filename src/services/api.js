@@ -26,15 +26,15 @@ export function loadLists() {
       cards: [
         {
           id: 1,
-          content: "Ind. Farm LTDA",
+          content: "Ind. Fazenda LTDA",
         },
         {
           id: 2,
-          content: "Musc. Sound Live Cpm",
+          content: "Musc. Sony",
         },
         {
           id: 3,
-          content: "Sebrae Empreendedorismo",
+          content: "Tech Sebrae",
         },
       ],
     },
@@ -43,7 +43,7 @@ export function loadLists() {
       cards: [
         {
           id: 1,
-          content: "Org. Internacionais",
+          content: "Org. Internacionais 002",
         },
       ],
     },

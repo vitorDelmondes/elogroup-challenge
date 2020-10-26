@@ -32,6 +32,13 @@ export default function Card({ data, index, listIndex }) {
         return;
       }
 
+      if (
+        draggedListIndex > targetListIndex ||
+        targetListIndex > draggedListIndex + 1
+      ) {
+        return;
+      }
+
       const targetSize = ref.current.getBoundingClientRect();
       const targetCenter = (targetSize.bottom - targetSize.top) / 2;
 

@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-import {
-  Input,
-  Button,
-} from "antd";
+import { Input, Button } from "antd";
 
 export const Container = styled.div`
   background-color: #ecf1f8;
@@ -20,10 +17,8 @@ export const Container = styled.div`
 
 export const Card = styled.div`
   display: flex;
-  /* padding: 30px 0;
-  height: calc(100% - 80px); */
+  overflow: auto;
   flex-direction: row;
-  /* margin-top: 5%; */
   background-color: #fff;
   width: 60%;
   height: 65%;
@@ -40,6 +35,5 @@ export const ButtomFilled = styled(Button)`
 `;
 
 export const Row = styled.div`
-    width: 60%;
+  width: 60%;
 `;
-
