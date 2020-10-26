@@ -7,9 +7,8 @@ import SignIn from "./pages/Auth/SignIn";
 
 const Routes = () => (
   <Switch>
-    {/* <AuthenticationRoute path="/signIn" component={SignIn} /> */}
-    <Route exact path="/" component={SignUp} />
-    <Route path="/signin" component={SignIn} />
+    <Route exact path="/" component={SignIn} />
+    <Route path="/signUp" component={SignUp} />
   </Switch>
 );
 

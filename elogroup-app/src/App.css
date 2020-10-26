@@ -1,0 +1,49 @@
+@import "~antd/dist/antd.css";
+
+.ant-layout {
+  background-color: #faf9fa;
+}
+
+#root {
+  background-color: #faf9fa;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.ant-upload.ant-upload-select {
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+}
+
+.ant-btn-primary {
+  background: #14222b;
+}
+
+.ant-btn-primary:focus {
+  background: #14222b;
+}
+
+.ant-btn-primary:hover {
+  background: #14222b;
+}
+
+.avatar-uploader > .ant-upload {
+  width: 128px;
+  height: 128px;
+}
+
+.ant-upload-picture-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-upload.ant-upload-select {
+  width: 40% !important;
+}
