@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { DndProvider } from "react-dnd";
 import { Layout } from "antd";
 import "./App.css";
 
@@ -9,12 +11,15 @@ import Routes from "./router";
 const App = () => {
   return (
     <>
-      <GlobaStyle />
       <BrowserRouter>
         <Layout>
-          <Routes />
+          <DndProvider backend={HTML5Backend}>
+            <Routes />
+          </DndProvider>
         </Layout>
       </BrowserRouter>
+
+      <GlobaStyle />
     </>
   );
 };

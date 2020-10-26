@@ -1,11 +1,11 @@
 @import "~antd/dist/antd.css";
 
 .ant-layout {
-  background-color: #faf9fa;
+  background-color: #ecf1f8;
 }
 
 #root {
-  background-color: #faf9fa;
+  background-color: #ecf1f8;
   top: 0;
   left: 0;
   bottom: 0;

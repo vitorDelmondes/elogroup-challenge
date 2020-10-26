@@ -2,13 +2,13 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 // Rotas da aplicação
-import SignUp from "./pages/Auth/SignUp";
-import SignIn from "./pages/Auth/SignIn";
+import SignIn from "./pages/Auth/SignIn-SignUp";
+import Main from "./pages/Main";
 
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={SignIn} />
-    <Route path="/signUp" component={SignUp} />
+    <Route path="/main" component={Main} />
   </Switch>
 );
 
