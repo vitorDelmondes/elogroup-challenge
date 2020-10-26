@@ -10,5 +10,5 @@ O projeto foi construído em ReactJS, foram utilizados:
 - Gerenciamento de Rotas com React Router Dom;
 - Conexão com backend utilizando axios;
 
-### `yarn isntall`
+### `yarn install`
 ### `yarn start`
