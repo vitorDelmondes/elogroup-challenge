@@ -6,16 +6,33 @@ import {
   InputRadius,
   ButtomFilled,
 } from "./styles";
-import { Card, Row, Col, Form, Button, Input, Spin, Modal } from "antd";
+import { Card, Row, Col, Form, Button, Input, Spin, Modal, message } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
 
 import Logo from "../../../assets/logo-white.png";
 
-const SignIn = () => {
+const SignIn = ({ history }) => {
   const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
-  const [loading, setLoaging] = useState("");
+  const [loading, setLoaging] = useState(false);
+  const [loadingRefresh, setLoadingRefresh] = useState(false);
   const [visible, setVisible] = useState(false);
+
+  const login = () => {
+    setLoaging(true);
+    setTimeout(() => {
+      setLoaging(false);
+      history.push('/main');
+    }, 2000)
+  };
+
+  const register = () => {
+    setLoadingRefresh(true);
+    setTimeout(() => {
+      message.success('Cadastro realizado com sucesso!');
+      setVisible(false);
+    })
+  }
 
   return (
     <Container>
@@ -27,14 +44,14 @@ const SignIn = () => {
           layout="vertical"
           name="basic"
           initialValues={{ remember: true }}
-          // onFinish={onFinish}
+          onFinish={login}
           // onFinishFailed={onFinishFailed}
         >
           <Form.Item
             label="Usuário"
             name="user"
             rules={[
-              { required: true, message: "Por favor, insira seu usuário." },
+              { required: true, message: "Por favor, insira seu usuário" },
             ]}
           >
             <Input
@@ -48,7 +65,7 @@ const SignIn = () => {
             label="Senha"
             name="password"
             rules={[
-              { required: true, message: "Por favor, insira sua senha." },
+              { required: true, message: "Por favor, insira sua senha" },
             ]}
           >
             <Input.Password
@@ -83,15 +100,16 @@ const SignIn = () => {
           onCancel={() => setVisible(false)}
           footer={[
             <ButtomFilled
-              // onClick={refreshPassword}
+              onClick={() => {
+                register();
+              }}
               type="primary"
               style={{
                 width: "100%",
                 color: "#fff",
               }}
             >
-              {/* {loadingRefresh ? <Spin indicator={antIcon} /> : "Confirmar"} */}
-              Registrar
+              {loadingRefresh ? <Spin indicator={antIcon} /> : "Registrar"}
             </ButtomFilled>,
           ]}
         >

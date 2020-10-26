@@ -1,16 +1,6 @@
 import styled from "styled-components";
 
 import {
-  Layout,
-  Row,
-  Col,
-  Typography,
-  Modal,
-  Upload,
-  message,
-  Table,
-  Select,
-  Checkbox,
   Input,
   Button,
 } from "antd";

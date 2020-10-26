@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+import {
+  Input,
+  Button,
+} from "antd";
+
 export const Container = styled.div`
   background-color: #ecf1f8;
   top: 0;
@@ -23,4 +28,13 @@ export const Card = styled.div`
   width: 60%;
   height: 65%;
   border-radius: 10px;
+`;
+
+export const InputRadius = styled(Input)`
+  border-radius: 5px;
+`;
+
+export const ButtomFilled = styled(Button)`
+  border-radius: 5px;
+  border: none;
 `;

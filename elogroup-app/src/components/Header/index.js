@@ -49,6 +49,7 @@ function HeaderComponent({ history }) {
             style={{ ...bsStyle, marginLeft: 10 }}
             onClick={() => {
               localStorage.clear();
+              history.push('/');
               window.location.reload();
             }}
           >
