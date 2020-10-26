@@ -4,11 +4,13 @@
 
 O projeto foi construído em ReactJS, foram utilizados:
 
-- Components Funcionais;
-- Estilização com Styled Components;
-- Gerenciamento de Estado com Redux;
-- Gerenciamento de Rotas com React Router Dom;
-- Conexão com backend utilizando axios;
+- Functional Components e React Hooks;
+- Estilização com Ant Design e Styled Components;
+- Gerenciamento de estado com Redux;
+- Gerenciamento de rotas com React Router Dom;
+- Requisições para o backend utilizando axios;
+
+## Para rodar a aplicação, execute: 
 
 ### `yarn install`
 ### `yarn start`
